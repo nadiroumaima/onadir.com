@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import {
+  Fira_Code as FiraCode,
+  Plus_Jakarta_Sans as PlusJakartaSans,
+} from 'next/font/google';
+import localFont from 'next/font/local';
+import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const fontCal = localFont({
+  src: '../assets/fonts/CalSans-SemiBold.woff2',
+  variable: '--font-cal',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const fontSans = PlusJakartaSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+const fontMono = FiraCode({
+  subsets: ['latin'],
+  variable: '--font-mono',
 });
 
 export const metadata: Metadata = {
@@ -24,10 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body  className={cn(fontSans.variable, fontMono.variable, fontCal.variable)}
+      suppressHydrationWarning>
+         <div id="__app" className={cn('flex min-h-screen flex-col')}>
+        <Header/>
         {children}
+        </div>
       </body>
     </html>
   );
