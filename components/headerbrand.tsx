@@ -9,7 +9,7 @@ const HeaderBrand = () => {
       <Link
         href="/"
         aria-label="home"
-        className="brix---header-logo-link-left flex items-center gap-3 transition-transform duration-200 hover:translate-y-[-2px] hover:scale-105"
+        className="brix---header-logo-link-left flex items-center gap-3 transition-transform duration-200 hover:translate-y-[2px] hover:scale-95"
       >
 <div className="w-14 h-14 p-1 rounded-full" style={{backgroundColor: 'rgba(55, 65, 81, 0.7)'}}>
 <div className="w-12 h-12 relative overflow-hidden rounded-full border-2 border-gray-300">
