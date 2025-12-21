@@ -24,3 +24,19 @@ export const NAV_LINKS: NavLink[] = [
  
 
 ];
+export const FOOTER_LINKS = [
+  [
+    {
+      title: 'Home',
+      path: '/',
+    },
+    {
+      title: 'About',
+      path: ROUTES.about,
+    },
+   
+   
+  ],
+
+];
+
