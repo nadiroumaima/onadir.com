@@ -20,6 +20,11 @@ export const NAV_LINKS: NavLink[] = [
     label: 'About',
     icon: <AtSign />,
   },
+  {
+    path: ROUTES.contact,
+    label: 'Contact',
+    icon: <AtSign />,
+  },
   
  
 
@@ -33,6 +38,10 @@ export const FOOTER_LINKS = [
     {
       title: 'About',
       path: ROUTES.about,
+    },
+    {
+      title: 'Contact',
+      path: ROUTES.contact,
     },
    
    
