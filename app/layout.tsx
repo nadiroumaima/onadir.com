@@ -7,6 +7,7 @@ import {
 } from 'next/font/google';
 import localFont from 'next/font/local';
 import { cn } from "@/lib/utils";
+import Footer from "@/components/footer";
 
 const fontCal = localFont({
   src: '../assets/fonts/CalSans-SemiBold.woff2',
@@ -38,8 +39,9 @@ export default function RootLayout({
       <body  className={cn(fontSans.variable, fontMono.variable, fontCal.variable)}
       suppressHydrationWarning>
          <div id="__app" className={cn('flex min-h-screen flex-col')}>
-        <Header/>
-        {children}
+        <Header />
+          <main>{children}</main>
+          <Footer />
         </div>
       </body>
     </html>
