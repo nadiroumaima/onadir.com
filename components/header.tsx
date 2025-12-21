@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import Link from '@/components/link';
 import { NAV_LINKS } from '@/constants/links';
 import { usePathname } from 'next/navigation';
+import HeaderBrand from './headerbrand'
 
 
 
@@ -17,6 +18,8 @@ const Header = () => {
         <header className={cn( 'bg-background sticky top-0 z-50 flex h-16 transition-colors duration-200', isScrolled ? 'shadow-sm' : 'saturate-110', )} >
 <Container>
     <div className={cn('flex h-full flex-1 items-center justify-between')}>
+      <HeaderBrand />
+
      <nav className={cn('hidden', 'md:flex')}>
               <ul className={cn('flex', 'md:gap-x-0.5')}>
                 {NAV_LINKS.filter(

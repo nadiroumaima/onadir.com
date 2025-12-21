@@ -35,3 +35,15 @@ export const AtSign = (props: ComponentProps<'svg'>) => (
     />
   </svg>
 );
+export const StatusDot = (props: ComponentProps<'svg'>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="10"
+    height="10"
+    viewBox="0 0 10 10"
+    {...props}
+  >
+    <circle cx="5" cy="5" r="5" fill="#A5E9D6" fillOpacity="0.4"/>
+    <circle cx="5" cy="5" r="2.5" fill="#1AFF8C"/>
+  </svg>
+);
