@@ -92,6 +92,7 @@
 .bg-grid {
   @apply relative z-0;
   &::before {
+    opacity: 0.35;
     @apply absolute inset-0 z-[-1] content-[''];
     background-image: var(--grid-pattern);
     mask-image: linear-gradient(transparent, black, transparent);
