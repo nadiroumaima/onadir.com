@@ -1,6 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
 import Container from '@/components/container'; 
+import { Button } from '@/components/ui/button';
+import { ROUTES } from '@/constants/routes';
+import Link from 'next/link';
+import { ChevronRightIcon } from 'lucide-react';
+
+
 const Hero = () => {
   return (
     <div className="bg-grid py-16 lg:py-20">
@@ -23,7 +29,21 @@ const Hero = () => {
         </div>
 
         <div className="mt-6 md:mt-8">
-          
+          <motion.div
+            className="relative"
+            initial={{ x: -16, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+        <Button variant="shadow" className="group">
+  <Link href={ROUTES.contact} className="flex items-center gap-1">
+    Let's Talk
+    <ChevronRightIcon className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
+  </Link>
+</Button>
+
+            
+          </motion.div>
         </div>
       </Container>
     </div>
