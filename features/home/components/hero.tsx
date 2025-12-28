@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import Container from '@/components/container'; 
 import { Button } from '@/components/ui/button';
 import { ROUTES } from '@/constants/routes';
+import FlipWords from '@/components/flip-words';
+
 import Link from 'next/link';
 import { ChevronRightIcon } from 'lucide-react';
 
@@ -23,9 +25,19 @@ const Hero = () => {
             </span>
             <span>Software Engineer</span>
           </motion.h1>
-          <motion.div className="from-foreground via-foreground/90 to-foreground/70 bg-gradient-to-b to-90% bg-clip-text font-bold text-transparent md:text-xl">
-            to be added
-          </motion.div>
+ <motion.div
+      className="from-foreground via-foreground/90 to-foreground/70 bg-gradient-to-b bg-clip-text font-bold text-transparent md:text-xl"
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
+      Ask me anything about{' '}
+      <FlipWords
+        words={['Cloud', 'Software Engineering', 'AWS', 'Azure', 'Cloud-Native']}
+  className="text-indigo-400 font-black"
+      />{' '}
+      — let’s create something great together!
+    </motion.div>
         </div>
 
         <div className="mt-6 md:mt-8">
