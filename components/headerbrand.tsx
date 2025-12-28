@@ -14,11 +14,14 @@ const HeaderBrand = () => {
 <div className="w-14 h-14 p-1 rounded-full" style={{backgroundColor: 'rgba(55, 65, 81, 0.7)'}}>
 <div className="w-12 h-12 relative overflow-hidden rounded-full border-2 border-gray-300">
   <Image
-    src="/assets/images/profile.png"
-    alt="Profile"
-    fill
-    className="object-cover"
-  />
+  src="/assets/images/cartoon_profile2.jpg"
+  alt="Profile"
+  width={96}
+  height={96}
+  className="object-cover rounded-full"
+  priority
+/>
+
 </div>
 </div>
 
